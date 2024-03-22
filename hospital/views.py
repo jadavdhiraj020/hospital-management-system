@@ -27,7 +27,7 @@ def appointment_add(request):
 def home(request):
     appointments = Appointment.objects.all()
     return render(
-        request, "hospital/home.html", {"appointments": appointments}
+        request, "hospital/index.html", {"appointments": appointments}
     )
 
 
