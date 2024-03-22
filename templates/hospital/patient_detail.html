@@ -1,0 +1,9 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+<h1>Patient Detail</h1>
+<p>ID: {{ patient.id }}</p>
+<p>Name: {{ patient.name }}</p>
+<p>age: {{ patient.age }}</p>
+<p>phone: {{ patient.phone }}</p>
+{% endblock content %}

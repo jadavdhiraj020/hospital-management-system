@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block content %}
+
+<table class="table table-hover table-bordered text-center">
+  <thead class="table-dark">
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>specialization</th>
+    </tr>
+  </thead>
+<!-- doctor_list.html -->
+<tbody>
+  {% for doctor in doctors %}
+  <tr>
+      <td>{{ doctor.id }}</td>
+      <td><a class="text-decoration-none" href="{% url 'doctor_detail' doctor.id %}">{{ doctor.name }}</a></td>
+      <td>{{ doctor.get_specializations_display }}</td>
+  </tr>
+  {% endfor %}
+</tbody>
+
+</table>
+
+{% endblock content %}

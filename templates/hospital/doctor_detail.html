@@ -1,0 +1,12 @@
+
+
+{% extends "base.html" %} 
+{% load static %} 
+{% block content %}
+<h1>Doctor Detail</h1>
+<p>ID: {{ doctor.id }}</p>
+<p>Name: {{ doctor.name }}</p>
+<p>Specialization: {{ doctor.get_specializations_display }}</p>
+
+{% endblock content %}
+

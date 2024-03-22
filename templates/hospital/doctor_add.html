@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% block content %}
+<form method="post" novalidate>
+  {% csrf_token %} 
+  <h3 class="text-success text-center">ADD DOCTOR FORMS</h3>
+  {% for form in form %}
+  <label for="{{ form.id_for_label }}" class="black-label"
+    >Enter {{ form.label }}</label
+  ><br />
+  {{ form }}<br /><br />
+  {% endfor %}
+  <button class="btn btn-outline-success" type="submit">ADD DOCTOR
+  </button>
+</form>
+{% endblock %}
